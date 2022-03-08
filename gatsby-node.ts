@@ -25,3 +25,13 @@ export async function createPages({ actions }) {
     redirectInBrowser: true,
   })
 }
+
+export function sourceNodes({ actions }) {
+  actions.createNode({
+    id: `dummy`,
+    internal: {
+      type: `Dummy`,
+      contentDigest: Date.now().toString(),
+    },
+  })
+}
