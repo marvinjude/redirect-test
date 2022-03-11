@@ -6,7 +6,12 @@ module.exports = {
     siteUrl: `https://redirecttestmaster.gatsbyjs.io/`,
   },
   plugins: [
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/`,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
